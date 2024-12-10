@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Weekly_Task_Manager">
+
+    <!-- Text "Quản lý công việc hàng tuần" -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quản lý công việc hàng tuần"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        android:background="@color/olive_dark_green"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Các trường nhập liệu và buttons -->
+    <LinearLayout
+        android:id="@+id/linearLayoutInputs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Cặp "Công việc" và EditText -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Công việc:"
+                android:textSize="12sp"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/editTextTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nhập công việc"
+                android:layout_weight="2"
+                android:inputType="text"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Cặp "Nội dung" và EditText -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nội dung:"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/editTextContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nhập nội dung"
+                android:layout_weight="2"
+                android:inputType="textMultiLine"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Cặp "Ngày HT" và Button "Date" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ngày HT:"
+                android:textSize="12sp"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Chọn ngày"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_weight="2"
+                android:inputType="date"
+                android:textColor="@color/red"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/buttonDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:backgroundTint="@color/gray2"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Cặp "Giờ HT" và Button "Time" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Giờ HT:"
+                android:textSize="12sp"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/editTextTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Chọn giờ"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_weight="2"
+                android:inputType="time"
+                android:textColor="@color/red"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/buttonTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:backgroundTint="@color/gray2"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Button "Thêm CV" -->
+        <Button
+            android:id="@+id/buttonAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/gray2"
+            android:text="Thêm CV"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <!-- Text "Danh sách công việc" -->
+    <TextView
+        android:id="@+id/textViewTaskList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách công việc"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:background="@color/olive_dark_green"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutInputs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ListView để hiển thị danh sách công việc -->
+    <ListView
+        android:id="@+id/listViewTasks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTaskList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

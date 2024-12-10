@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/dialog_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/question"
+        android:contentDescription="@string/dialog_icon_description" />
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận để thoát!!!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bạn có muốn thoát?"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Thêm layout cho các nút hành động -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/button_disagree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Không đồng ý"
+            android:backgroundTint="@color/gray"
+            android:layout_marginEnd="8dp"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/button_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đồng ý"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</LinearLayout>

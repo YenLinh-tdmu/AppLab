@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculate">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:background="@color/pastel_green"
+                android:gravity="center"
+                android:text="Các kiểu lập trình sự kiện"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/labelA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số a:"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/numa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Nhập số a"
+                    android:textSize="16sp"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/labelB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số b:"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/numb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Nhập số b"
+                    android:textSize="16sp"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp"
+                android:background="@color/pastel_green"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/sum"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Tổng 2 số"
+                android:textSize="15sp"
+                android:onClick="calculateSum"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/gray2"/>
+
+            <Button
+                android:id="@+id/diff"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Hiệu 2 số"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/gray2"/>
+
+            <Button
+                android:id="@+id/pro"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Tích 2 số"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/gray2"/>
+
+            <Button
+                android:id="@+id/quo"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Thương 2 số"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/gray2"/>
+
+            <Button
+                android:id="@+id/gcd"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Ước chung lớn nhất của 2 số"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/gray2"/>
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Thoát chương trình"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center"
+                android:textColor="@color/red"
+                android:backgroundTint="@color/gray2"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

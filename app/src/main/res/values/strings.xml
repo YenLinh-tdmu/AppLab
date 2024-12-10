@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Yến Linh</string>
+    <string name="dialog_icon_description">Biểu tượng câu hỏi</string>
+    <string name="exit_confirmation_title">Xác nhận để thoát!!!</string>
+    <string name="exit_confirmation_message">Bạn có muốn thoát?</string>
+    <string name="positive_button">Đồng ý</string>
+    <string name="negative_button">Không đồng ý</string>
+    <string name="neutral_button">Hủy</string>
+    <string-array name="names_array">
+        <item>Tèo</item>
+        <item>Tý</item>
+        <item>Bin</item>
+        <item>Bo</item>
+    </string-array>
+    <string-array name="local_array">
+        <item>Hà Nội</item>
+        <item>Huế</item>
+        <item>Spa</item>
+        <item>Côn Sơn</item>
+        <item>Vũng Tàu</item>
+        <item>Đà Nẵng</item>
+    </string-array>
+</resources>

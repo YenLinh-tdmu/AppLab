@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon_main"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_main"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppLab"
+        tools:targetApi="31">
+        <activity
+            android:name=".Weekly_Task_Manager"
+            android:exported="false" />
+        <activity
+            android:name=".Spinner_ListView"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_ListView_Layout"
+            android:exported="false" />
+        <activity
+            android:name=".ListView_BaiTap12"
+            android:exported="false" />
+        <activity
+            android:name=".ListView_BaiTap11"
+            android:exported="false" />
+        <activity
+            android:name=".Information"
+            android:exported="false" />
+        <activity
+            android:name=".Convert_F_C"
+            android:exported="false" />
+        <activity
+            android:name=".Calculate"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Dialog_Custom"
+            android:exported="false" />
+        <activity
+            android:name=".Interface"
+            android:exported="false" />
+        <activity
+            android:name=".Inline"
+            android:exported="false" />
+        <activity
+            android:name=".Table"
+            android:exported="false" />
+        <activity
+            android:name=".Dialog"
+            android:exported="false" />
+        <activity
+            android:name=".Onclick"
+            android:exported="false" />
+        <activity
+            android:name=".Relative"
+            android:exported="false" />
+        <activity
+            android:name=".Vertical_WeightSum"
+            android:exported="false" />
+        <activity
+            android:name=".Vertical_NoWeightSum"
+            android:exported="false" />
+        <activity
+            android:name=".Horizontal_NoWeightSum"
+            android:exported="false" />
+        <activity
+            android:name=".Linear_Horizontal"
+            android:exported="false" />
+        <activity
+            android:name=".Linear_Vertical"
+            android:exported="false" />
+        <activity
+            android:name=".Linear"
+            android:exported="false" />
+        <activity
+            android:name=".HomePage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
